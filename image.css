@@ -1,0 +1,118 @@
+:root{
+    --squ: min(60vw,70vh);
+    --neg: calc((min(60vw,70vh)) * -1)
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(173, 173, 173);
+}
+
+body{
+    background-color: black;
+}
+
+h1{
+    text-align: center;
+    margin: 2vh 0
+}
+
+p{
+    font-size: 2rem;
+    margin: 2vh auto;
+    text-align: justify;
+    width: 90vw;
+}
+
+.nav{
+    display: flex;
+    background-color:rgb(7, 0, 202);
+    justify-content: space-evenly;
+    height: 5vh;
+    align-items: center;
+}
+
+.nav div{
+    color: rgb(0, 0, 0);
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.getridfor{
+    position: absolute;
+    right: var(--neg);
+}
+
+.getridback{
+    position: absolute;
+    right: var(--neg);
+}
+
+img{
+    width: var(--squ);
+    transition: all 2s;
+}
+
+#prev{
+    position:absolute;
+    left: var(--neg);
+}
+
+#next{
+    position:absolute;
+    right: var(--neg);
+}
+
+.cara{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.movers{
+    background-color:rgb(0, 0, 0);
+    font-size: min(20vw,10vh);
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+strong{
+    color: black;
+}
+
+#moves{
+    box-sizing: border-box;
+    padding-left: 0.5vw;
+    height: 3vh;
+    font-size: 2.5vh;
+    color: black;
+    margin: 0 auto;
+    width: min(60vw,70vh);
+    background-color: white;
+}
+
+.dots{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70vw;
+}
+
+.dot{
+    width: max(2vh,2vw);
+    height: max(2vh,2vw);
+    margin: 2vh 0;
+    background-color: rgba(28, 89, 163,0.7);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot:hover{
+    background-color: rgb(28, 89, 163);
+}
+
+.theone, .theone:hover{
+    background-color: rgb(7, 97, 206);
+}
