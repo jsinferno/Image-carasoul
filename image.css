@@ -39,29 +39,9 @@ p{
     font-weight: bold;
 }
 
-.getridfor{
-    position: absolute;
-    right: var(--neg);
-}
-
-.getridback{
-    position: absolute;
-    right: var(--neg);
-}
-
 img{
     width: var(--squ);
     transition: all 2s;
-}
-
-#prev{
-    position:absolute;
-    left: var(--neg);
-}
-
-#next{
-    position:absolute;
-    right: var(--neg);
 }
 
 .cara{
@@ -116,3 +96,16 @@ strong{
 .theone, .theone:hover{
     background-color: rgb(7, 97, 206);
 }
+
+.allimages{
+    display: flex;
+    position: relative;
+    transition: all 2s;
+
+}
+
+.frame {
+    width: var(--squ);
+    overflow: hidden;
+}
+

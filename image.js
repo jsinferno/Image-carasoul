@@ -7,31 +7,52 @@ const moves = {
     1: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3"
 }
 
-const dots = (document.getElementsByClassName("dot"))
-const width = document.getElementById("img").width;
+
+
+
+const dots = document.getElementsByClassName("dot")
+
+let width = 0
+
+const resizer = () => {
+    width = Number(document.getElementById("img").width)
+}
+
+resizer()
+window.addEventListener("resize",() => {
+    setTimeout(() => {
+        console.log(21,width)
+        resizer()
+        console.log(width)
+        update(which)
+    }, 2000);
+    
+})
+
+for (let index = 1; index < 9; index++) {
+    const element = document.querySelector("img").cloneNode()
+    element.src = `Pictures/${index}.png`
+    document.querySelector(".allimages").appendChild(element)    
+}
 
 const update = function(index) {
     which = index
-    console.log(index)
     document.getElementById("bottomText").innerText = text[index]
     document.getElementById("moves").innerHTML = moves[index]
-    document.getElementById("img").src = `Pictures/${index}.png`
-    if (index < dots.length-1) document.getElementById("next").src = `Pictures/${index+1}.png`
-    if (index > 0) document.getElementById("prev").src = `Pictures/${index-1}.png`
+    document.querySelector(".allimages").style.left = `${-1*(width*index)}px`
     for (let i = 0; i < dots.length; i++) {
         const element = dots[i];
-        if (i != which) {element.classList.remove("theone")
-     }else element.classList.add("theone")}
-    
+        if (i == which) {element.classList.add("theone")
+        }else element.classList.remove("theone")
+    }    
 }
-
-let which = 0
+    
+let which = 1
 update(which)
 
 
 for (let index = 0; index < dots.length; index++) {
     const element = dots[index];
-    console.log(element.classList)
     if (index == which) {element.classList.add("theone")
     }else if ("theone" in element.classList) element.classList.remove("theone")
 
