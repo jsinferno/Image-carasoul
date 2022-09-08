@@ -4,7 +4,10 @@ const text =
 
 const moves = {
     0: "e4 <strong>e5</strong> f4",
-    1: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3"
+    1: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3",
+    2: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3 <strong>g4</strong> bc4",
+    3: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3 <strong>g4</strong> bc4 <strong>g5</strong> 0-0",
+    4: "e4 <strong>e5</strong> f4 <strong>exf4</strong> nf3 <strong>g4</strong> bc4 <strong>g5</strong> 0-0 <strong>gxf3</strong> Qxf3",
 }
 
 
@@ -47,7 +50,7 @@ const update = function(index) {
     }    
 }
     
-let which = 1
+let which = 0
 update(which)
 
 
